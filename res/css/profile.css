@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+}
+
+/* Navigation bar styling */
+
+nav{
+    width: 100%;
+    background-color: #161b22;
+    display: flex;
+    align-items: center;
+    color: #eee;
+    height: 80px;
+    padding: 18px 35px;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+nav .ham-menu{
+    display: none;
+}
+
+nav .logo{
+    height: 100%;
+   
+}
+
+nav .logo a img{
+    height: 100%;
+}
+
+nav .form-div{
+    margin: 0 16px;
+    width: 20%;
+}
+
+nav .form-div form .search{
+    width: 100%;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border:  1px solid #2e343e;
+    background: #161b22;
+}
+
+nav .form-div form input{
+    background: #161b22;
+    padding: 0.6rem;
+    outline: none;
+    width: 100%;
+    border: none;
+    color: #eee;
+}
+
+nav .form-div  form input::placeholder{
+    color: rgb(139, 139, 139);
+}
+
+nav .form-div form .search span{
+    border:  1px solid #2e343e;
+    background: #161b22;
+    margin: 5px;
+    color: #2e343e;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+}
+
+nav .links{
+    margin: 0 10px;
+    flex-grow: 1;
+}
+
+nav .links ul{
+    display: flex;
+}
+
+nav .links ul li{
+    list-style: none;
+    margin-left: 10px;
+}
+
+nav .icons{
+    justify-self: flex-end;
+}
+
+nav .icons .icon1 {
+    position: relative;
+    font-size: 1.4rem;
+}
+
+nav .icons .icon1 .status-indicator{
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    z-index: 12;
+    /* display: none; */
+    width: 0.8rem;
+    height: 0.8rem;
+    color: #eee;
+    background-image: linear-gradient(#54a3ff,#006eed);
+    background-clip: padding-box;
+    border: 2px solid #161b22;
+    border-radius: 50%;
+}
+
+
+
+
+/* media queries  */
+
+/* --- tablet device ---  */
+@media screen and (min-width: 750px) and (max-width: 920px ){
+
+    .tohide{
+        display: none;
+    }
+
+    nav{
+        font-weight: 600;
+        font-size: 0.81rem;
+    }
+
+    nav .form-div{
+        width: 28%;
+        margin-right: 6px;
+    }
+        
+}
+
+
+
+
+
+/* --- mobile phone ---  */
+@media screen and (max-width:  749px ){
+
+nav{
+    justify-content: space-between;
+}
+
+nav .ham-menu{
+    display: block;
+    font-size: 2.5rem;
+}
+
+nav .logo{
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+nav .icon1{
+    font-size: 1.5rem;
+}
+
+nav .form-div, nav .links, nav .icon2, nav .icon3{
+    display: none;
+}
+
+
+
+}
