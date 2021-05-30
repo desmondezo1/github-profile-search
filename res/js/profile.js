@@ -32,8 +32,8 @@ function showuserdata(data) {
     console.log(data);
 
    
-    profileIcon.innerHTML = ` <img src="${data.data.user.avatarUrl}" alt="">`;
-    repoCount.innerHTML = `<b>${ Object.keys(data.data.user.repositories.nodes).length  }</b>`;
+    profileIcon.innerHTML = ` <img src="${data.data.user?.avatarUrl}" alt="">`;
+    repoCount.innerHTML = `<b>${ Object.keys(data.data.user?.repositories.nodes).length  }</b>`;
     profileImg.innerHTML = 
     `   <img src="${data.data.user?.avatarUrl}" alt="">
         <span class="circle">
