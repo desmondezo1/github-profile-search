@@ -538,10 +538,12 @@ main{
     .col1 .profile-details{
         /* width: 100%; */
         margin-left: 20px;
+        flex-grow: 1;
     }
 
     .col1 .profile-img .img-wrapper{
         position: relative;
+        flex-grow: 0.1;
     }
     
     .col1 .profile-img img{
