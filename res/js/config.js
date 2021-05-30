@@ -46,10 +46,11 @@ export const config_data = {
       
     "headers" : {
         "Content-Type" : "application/json",
-        Authorization : "Bearer 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"
+        Authorization : "Bearer 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"
     },
 
     "baseUrl" : "https://api.github.com/graphql"
 
 }
 
+// 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
