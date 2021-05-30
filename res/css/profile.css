@@ -455,6 +455,10 @@ main{
         height: 20px;
         width: 20px;
     }
+
+    .col2 .repo .repo-stats{
+        width: 55%;
+    }
         
 }
 

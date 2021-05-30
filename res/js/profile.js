@@ -68,6 +68,43 @@ function showuserdata(data) {
           return color;
     }
 
+    function getDateDifference(date){
+        let now = new Date();
+        let oldDate = new Date(date);
+        console.log(now);
+        console.log(oldDate);
+
+        let diff = ( now.getTime() - oldDate.getTime() ) / 1000;
+        diff /= (60 * 60);
+
+        // convert to days 
+        if(diff >= 24 && diff <= 29 ){
+            let num = +diff/24;
+            // val = Math.abs(Math.round(num));
+            return `${num} days`;
+        }
+
+        // // convert to months 
+        // if(diff >= 30 && diff <= 364 ){
+        //     let days = diff/24;
+        //     let months = days / 30;
+        //     val = Math.round(months);
+        //     return `${val} months`;
+        // }
+
+        // convert to years 
+        if(diff >= 365  ){
+            let days = diff/24;
+            let months = days / 30;
+            let years = months / 12;
+            val = Math.round(years);
+            return `${val} years`;
+        }
+
+        return `${Math.round(diff)} hours`;
+    
+    }
+
     // loop through and combine repository data 
     function compileRepos(){
         let repoObject = data.data.user.repositories.nodes;
@@ -96,7 +133,7 @@ function showuserdata(data) {
                                     </svg>
                                 </span>
                                 <span>
-                                    20
+                                ${repo.stargazers?.totalCount}
                                 </span>
                             </div>
                             <div class="repo-icons r-fork">
@@ -110,7 +147,7 @@ function showuserdata(data) {
                                 ${repo.forks?.totalCount}
                                 </span>
                             </div>
-                            <div class="repo-icons r-date">updated on 1 Oct</div>
+                            <div class="repo-icons r-date">updated ${getDateDifference(repo.updatedAt)} ago</div>
                         </div>
                         <button class="star-btn" >
                            <span class="star-icon">
