@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 body{
     height: 100vh;
@@ -15,8 +16,8 @@ nav{
     display: flex;
     align-items: center;
     color: #eee;
-    height: 80px;
-    padding: 18px 35px;
+    /* height: 80px; */
+    padding: 16px 35px;
     font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
@@ -42,8 +43,10 @@ nav .form-div form .search{
     width: 100%;
     outline: none;
     display: flex;
+    height: 32px;
     justify-content: center;
     align-items: center;
+    padding: 5px;
     border-radius: 10px;
     border:  1px solid #2e343e;
     background: #161b22;
@@ -51,15 +54,17 @@ nav .form-div form .search{
 
 nav .form-div form input{
     background: #161b22;
-    padding: 0.6rem;
+    padding: 0 10px;
     outline: none;
     width: 100%;
+    height: 100%;
     border: none;
     color: #eee;
 }
 
 nav .form-div  form input::placeholder{
     color: rgb(139, 139, 139);
+    font-weight: 600;
 }
 
 nav .form-div form .search span{
@@ -67,7 +72,10 @@ nav .form-div form .search span{
     background: #161b22;
     margin: 5px;
     color: #2e343e;
-    padding: 0.2rem 0.6rem;
+    font-size: 0.5rem;
+    font-weight: 600;
+    height: 100%;
+    padding: 3px 6px;
     border-radius: 5px;
 }
 
@@ -86,12 +94,27 @@ nav .links ul li{
 }
 
 nav .icons{
+    display: flex;
+    flex-grow: 0.1;
     justify-self: flex-end;
+    justify-content: space-between;
+    
+}
+
+nav .icon1, .icon2, .icon3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .icons .drp-dwn-icon{
+    margin-left: 5px;
+    font-size: 0.6rem;
 }
 
 nav .icons .icon1 {
     position: relative;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
 }
 
 nav .icons .icon1 .status-indicator{
@@ -109,12 +132,210 @@ nav .icons .icon1 .status-indicator{
     border-radius: 50%;
 }
 
+nav .icons .icon2 .add-icon {
+    font-size: 1.3rem;
+}
+
+nav .icons .icon3 {
+    display: flex;
+}
+
+nav .icons .icon3 .profile-icon{
+    height: 25px;
+    width: 25px;
+}
+
+nav .icons .icon3 .profile-icon img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* --------- End of NAV bar css ------- */
+/* --------- End of NAV bar css ------- */
 
 
 
-/* media queries  */
+/* ---------- START OF MAIN STYLE ------- */
 
+main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10%;
+    height: 100%;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 5% 20% auto 5%;
+    grid-template-areas: 
+    ". col1 col2 .";
+    height: 100%;
+}
+
+.tabs{
+    display: grid;
+    background-color: #ffffff;
+    border-bottom: 1px solid #c7c7c7;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 5% 20% auto 5%;
+    grid-template-areas: ". . tab-list .";
+}
+
+.tabs .tab-list{
+    grid-area: tab-list;
+    display: flex;
+    align-items: flex-end;
+}
+
+.tabs .tab-list .tab-list-item{
+    list-style: none;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+
+
+.col1{
+    grid-area: col1;
+    background-color: #a70777;
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+}
+
+.col1 .profile-img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.col1 .profile-img img{
+    width: 100%;
+    border-radius: 50%;
+    position: relative;
+    top: -60px;
+}
+
+.col1 .profile-img .img-wrapper .circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #adadad;
+    top: 35%;
+    right: 0px;
+}
+
+
+
+.col1 .profile-img .profile-details{
+    position: relative;
+    top: -42px;
+}
+
+.col2{
+    grid-area: col2;
+    background-color: #006aff;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+.col2 .search-field{
+    padding: 10px 10px 15px 10px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+.col2 .search-field .find-repo{
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border:none;
+}
+
+.col2 .stats{
+   
+margin: 20px 0px;
+}
+
+.col2 .stats span{
+    padding: 15px 10px 15px 10px;
+    border-bottom: 1px solid grey;
+}
+
+
+.col2 .repo{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 0.1fr;
+    grid-template-areas: 
+    "repo-name star-btn"
+    "repo-desc star-btn"
+    "repo-stats star-btn";
+    border-bottom: 1px solid grey;
+    padding: 20px 10px;
+}
+
+.col2 .repo .reponame{
+    grid-area: repo-name;
+    margin-bottom: 10px;
+    color: #58a6ff;
+}
+
+.col2 .repo .repo-desc{
+    grid-area: repo-desc;
+    word-wrap: break-word;
+    max-width: 80%;
+}
+
+.col2 .repo .repo-stats{
+    grid-area: repo-stats;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.col2 .repo .star-btn{
+    grid-area: star-btn;
+    /* padding: 6px 10px; */
+    align-self: center;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3px 12px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.col2 .repo .star-btn .star-icon{
+    font-size: 1.2rem;
+    display: flex;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+/* media queries*/
+
+
+/* ------------------------------- */
 /* --- tablet device ---  */
+/* --------------------------------- */
+
+
 @media screen and (min-width: 750px) and (max-width: 920px ){
 
     .tohide{
@@ -130,38 +351,87 @@ nav .icons .icon1 .status-indicator{
         width: 28%;
         margin-right: 6px;
     }
+
+    nav .icon1, .icon2, .icon3{
+        margin-left: 10px;
+    }
+
+    nav .icons .icon2 .add-icon {
+        font-size: 1.1rem;
+    }
+
+    nav .icons .icon3 .profile-icon{
+        height: 20px;
+        width: 20px;
+    }
         
 }
 
 
+/* -------------------------------- */
+/* ------- Mobile phone ------ */
+/* ----------------------------------- */
 
 
-
-/* --- mobile phone ---  */
 @media screen and (max-width:  749px ){
+    .tohide{
+        display: none;
+    }
 
-nav{
-    justify-content: space-between;
-}
+    nav{
+        justify-content: space-between;
+    }
 
-nav .ham-menu{
-    display: block;
-    font-size: 2.5rem;
-}
+    nav .ham-menu{
+        display: block;
+        font-size: 2.5rem;
+    }
 
-nav .logo{
-    align-self: center;
-    justify-content: center;
-    justify-self: center;
-}
+    nav .logo{
+        align-self: center;
+        justify-content: center;
+        justify-self: center;
+    }
 
-nav .icon1{
-    font-size: 1.5rem;
-}
+    nav .icons .icon1{
+        font-size: 1.5rem;
+    }
 
-nav .form-div, nav .links, nav .icon2, nav .icon3{
-    display: none;
-}
+    nav .form-div, nav .links, nav .icons .icon2, nav .icons .icon3{
+        display: none;
+    }
+
+    /* ----------- main body style --------------- */
+    .tabs{
+        display: none;
+    }
+    .wrapper{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "col1" "col2";
+        height: 100%;
+    }
+
+    .col1 .profile-img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: 70px;
+        max-height: 70px;
+        display: flex;
+    }
+
+    .col1 .profile-img .img-wrapper{
+        position: relative;
+    }
+    
+    .col1 .profile-img img{
+        width: 100%;
+        border-radius: 50%;
+        position: relative;
+        top: 0px;
+    }
 
 
 
