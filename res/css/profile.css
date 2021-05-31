@@ -530,27 +530,31 @@ main{
         display: flex;
         }
 
-    .col1 .profile-img img{
+    /* .col1 .profile-img img{
         height: 100%;
         width: 100%;
-    }
+    } */
 
     .col1 .profile-details{
         /* width: 100%; */
+      
         margin-left: 20px;
-        flex-grow: 1;
+     
     }
 
     .col1 .profile-img .img-wrapper{
         position: relative;
-        flex-grow: 0.1;
+        
     }
     
     .col1 .profile-img img{
-        width: 100%;
+        /* width: 100%; */
         border-radius: 50%;
         position: relative;
         top: 0px;
+        /* height: 100%; */
+        height: 75px;
+        width: 75px;
     }
 
 
