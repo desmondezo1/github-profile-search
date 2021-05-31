@@ -1,10 +1,9 @@
+require('dotenv').config();
+let token = process.env.GITHUB_PERSONAL_ACCESS_TOKEN;
+
+console.log(token);
 
 export const config_data = {
-    
-    "git_data" : { 
-                    token : "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",   
-                    username : "desmondezo1" 
-                },
 
     "query_function" : (username) => {
             let body = {
@@ -44,13 +43,12 @@ export const config_data = {
           return body;
       },
       
-    "headers" : {
+    headers : {
         "Content-Type" : "application/json",
-        Authorization : "Bearer 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"
+        Authorization : "bearer "+token
     },
 
     "baseUrl" : "https://api.github.com/graphql"
 
 }
 
-// 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
