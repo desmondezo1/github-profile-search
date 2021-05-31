@@ -1,7 +1,7 @@
-require('dotenv').config();
-let token = process.env.GITHUB_PERSONAL_ACCESS_TOKEN;
+import { GITHUB_PERSONAL_ACCESS_TOKEN } from "./keys.js";
 
-console.log(token);
+
+console.log(GITHUB_PERSONAL_ACCESS_TOKEN);
 
 export const config_data = {
 
@@ -45,7 +45,7 @@ export const config_data = {
       
     headers : {
         "Content-Type" : "application/json",
-        Authorization : "bearer "+token
+        Authorization : "bearer "+GITHUB_PERSONAL_ACCESS_TOKEN
     },
 
     "baseUrl" : "https://api.github.com/graphql"
