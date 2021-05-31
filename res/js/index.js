@@ -33,7 +33,7 @@ const errorBox = document.getElementById("errorBox");
 
     localStorage.setItem("Git-user-data", JSON.stringify(userdata) );
     console.log(userdata);
-    // location.href ="profile.html";
+    location.href ="profile.html";
     return userdata;
   };
 
