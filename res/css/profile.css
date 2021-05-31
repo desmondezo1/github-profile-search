@@ -27,7 +27,10 @@ nav .ham-menu{
 
 nav .logo{
     height: 100%;
-   
+}
+
+nav .logo svg{
+    fill: #eee;
 }
 
 nav .logo a img{
@@ -480,7 +483,11 @@ main{
 
     nav .ham-menu{
         display: block;
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    nav .ham-menu span{
+        display: flex;
     }
 
     nav .logo{
@@ -489,8 +496,17 @@ main{
         justify-self: center;
     }
 
+    nav .logo svg {
+        height: 25px;
+        width: 25px;
+    }
+
     nav .icons .icon1{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    nav .icons .icon1 span:first-child{
+        display: flex;
     }
 
     nav .form-div, nav .links, nav .icons .icon2, nav .icons .icon3{
