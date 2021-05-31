@@ -229,6 +229,15 @@ main{
     border-bottom: 2px solid #be6859;
 }
 
+.tabs .tab-list .repo-tab .repo-totalCount{
+    margin-left: 10px;
+    display: flex;
+    padding: 2px 5px;
+    background: #cacaca;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    color: #565656;
+}
 
 .col1{
     grid-area: col1;

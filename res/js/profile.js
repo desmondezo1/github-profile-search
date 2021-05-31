@@ -27,6 +27,7 @@ function showuserdata(data) {
     let profileLoginName = document.querySelector(".login-name");
     let userBio = document.querySelector(".bio");
     let repos = document.querySelector(".repos");
+    let repoTotalCount = document.querySelector(".repo-totalCount");
     
 
     console.log(data);
@@ -34,6 +35,7 @@ function showuserdata(data) {
    
     profileIcon.innerHTML = ` <img src="${data.data.user?.avatarUrl}" alt="">`;
     repoCount.innerHTML = `<b>${ Object.keys(data.data.user?.repositories.nodes).length  }</b>`;
+    repoTotalCount.innerHTML = `${ Object.keys(data.data.user?.repositories.nodes).length  }`;
     profileImg.innerHTML = 
     `   <img src="${data.data.user?.avatarUrl}" alt="">
         <span class="circle">
